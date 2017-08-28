@@ -15,8 +15,8 @@ class CreateAgendaTable extends Migration
     {
       Schema::create('agenda', function (Blueprint $table) {
           $table->increments('id');
-          $table->smalldatetime('FEC_INI_AGE');
-          $table->smalldatetime('FEC_FIN_AGE');
+          $table->datetime('FEC_INI_AGE');
+          $table->datetime('FEC_FIN_AGE');
           $table->time('HORA_INI_AGE');
           $table->time('HORA_FINI_AGE');
 

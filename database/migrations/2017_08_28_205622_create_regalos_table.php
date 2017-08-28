@@ -16,7 +16,7 @@ class CreateRegalosTable extends Migration
       Schema::create('regalos', function (Blueprint $table) {
           $table->increments('id');
           $table->string('DES_REG');
-          $table->money('PRE_REG');
+          $table->float('PRE_REG');
           $table->timestamps();
       });
     }

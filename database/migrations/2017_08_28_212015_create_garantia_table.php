@@ -15,7 +15,7 @@ class CreateGarantiaTable extends Migration
     {
       Schema::create('garantia', function (Blueprint $table) {
           $table->increments('id');
-          $table->money('MON_GAR');
+          $table->float('MON_GAR');
           $table->timestamps();
 
           $table->integer('ID_CLIE')->unsigned();
@@ -28,10 +28,7 @@ class CreateGarantiaTable extends Migration
           $table->foreign('ID_GAS')->references('id')->on('gasa');
 
           $table->integer('ID_MAN_PEQUE')->unsigned();
-          $table->foreign('ID_MAN_PEQUE')->references('id')->on('mantel_pequeño');
-
-          $table->integer('ID_GAS')->unsigned();
-          $table->foreign('ID_GAS')->references('id')->on('gasa');
+          $table->foreign('ID_MAN_PEQUE')->references('id')->on('mantelito');
 
           $table->integer('ID_FLOR_ART')->unsigned();
           $table->foreign('ID_FLOR_ART')->references('id')->on('flor_artificial');
