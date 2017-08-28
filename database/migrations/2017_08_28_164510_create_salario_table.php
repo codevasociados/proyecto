@@ -13,7 +13,14 @@ class CreateSalarioTable extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('salario', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('SAL_MAX');
+          $table->integer('SAL_MIN');
+          $table->integer('DESC_SAL');
+          $table->integer('ADELANTO_SAL');
+          $table->timestamps();
+      });
     }
 
     /**
@@ -23,6 +30,6 @@ class CreateSalarioTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('torta');
     }
 }
