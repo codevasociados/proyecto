@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 namespace App\Http\Controllers;
+=======
+namespace codev\Http\Controllers;
+>>>>>>> 91faf6e40ed787cab614ef480c43c4b3cea89ee1
 
 use Illuminate\Http\Request;
 
