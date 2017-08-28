@@ -17,7 +17,7 @@ class CreateFlorNaturalTable extends Migration
           $table->increments('id');
           $table->string('TAM_FLOR_NAT');
           $table->string('EST_FLOR_NAT');
-          $table->money('PRE_FLOR_NAT');
+          $table->float('PRE_FLOR_NAT');
           $table->timestamps();
       });
     }

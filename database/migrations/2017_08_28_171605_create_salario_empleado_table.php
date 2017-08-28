@@ -21,7 +21,8 @@ class CreateSalarioEmpleadoTable extends Migration
             $table->foreign('ID_ADM')->references('id')->on('administrador')->onDelete('cascade');
             $table->integer('ID_SUC')->unsigned();
             $table->foreign('ID_SUC')->references('id')->on('sucursal')->onDelete('cascade');
-    }
+    });
+  }
 
     /**
      * Reverse the migrations.

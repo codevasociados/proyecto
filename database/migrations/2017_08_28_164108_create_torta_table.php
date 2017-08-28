@@ -15,11 +15,11 @@ class CreateTortaTable extends Migration
     {
         Schema::create('torta', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('PREC_TORTA', 100);
+            $table->integer('PREC_TORTA');
             $table->string('TAM_TORTA');
             $table->string('COLOR_TORTA');
             $table->string('TIPO_TORTA');
-            $table->string('DES_TORTA', 200);
+            $table->string('DES_TORTA');
             $table->timestamps();
         });
     }

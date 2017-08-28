@@ -17,7 +17,7 @@ class CreateAzucarTable extends Migration
           $table->increments('id');
           $table->string('DES_AZU');
           $table->string('EST_AZU');
-          $table->money('PRE_AZU');
+          $table->float('PRE_AZU');
           $table->timestamps();
       });
     }

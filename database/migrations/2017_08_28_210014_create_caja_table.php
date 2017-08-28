@@ -17,7 +17,7 @@ class CreateCajaTable extends Migration
           $table->increments('id');
           $table->string('DES_CAJ');
           $table->string('EST_CAJ');
-          $table->money('PRE_CAJ');
+          $table->float('PRE_CAJ');
           $table->timestamps();
       });
 

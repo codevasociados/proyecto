@@ -18,8 +18,8 @@ class CreateClienteTable extends Migration
             $table->string('NOM_CLIE');
             $table->string('PAT_CLIE');
             $table->string('MAT_CLIE');
-            $table->string('CI_CLIE')->unique();
-            $table->integer('TEL_CLIE', 10);
+            $table->string('CI_CLIE',60)->unique();
+            $table->integer('TEL_CLIE');
             $table->timestamps();
         });
     }

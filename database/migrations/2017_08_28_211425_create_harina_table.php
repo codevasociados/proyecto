@@ -17,7 +17,7 @@ class CreateHarinaTable extends Migration
           $table->increments('id');
           $table->string('DES_HAR');
           $table->string('EST_HAR');
-          $table->money('PRE_HAR');
+          $table->float('PRE_HAR');
           $table->timestamps();
       });
     }

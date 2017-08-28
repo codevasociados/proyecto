@@ -17,7 +17,7 @@ class CreateLacteosTable extends Migration
           $table->increments('id');
           $table->string('TIP_LAC');
           $table->string('EST_LAC');
-          $table->money('PRE_LAC');
+          $table->float('PRE_LAC');
           $table->timestamps();
       });
     }
