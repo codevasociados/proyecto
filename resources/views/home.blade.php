@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('titulo')
 
 @section('titulo')
 Contenido de prueba

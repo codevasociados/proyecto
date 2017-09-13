@@ -99,7 +99,7 @@ class ClienteController extends Controller
       $id=$request->id;
       $cliente=Cliente::Find($id);
       $cliente->NOM_CLIE=$request->nom_clie;
-      $cliente->PAT_CLIE=$request->pat_clie;
+      $cliente->PAT_CLIE=$request->pat_clie;  
       $cliente->MAT_CLIE=$request->mat_clie;
       $cliente->CI_CLIE=$request->ci_clie;
       $cliente->TEL_CLIE=$request->tel_clie;
