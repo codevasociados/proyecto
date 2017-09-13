@@ -22,11 +22,7 @@ class CreateGastoHornoTable extends Migration
             $table->foreign('ID_ADM')->references('id')->on('administrador')->onDelete('cascade');
             $table->integer('ID_SUC')->unsigned();
             $table->foreign('ID_SUC')->references('id')->on('sucursal')->onDelete('cascade');
-<<<<<<< HEAD
-          });
-=======
     });
->>>>>>> 73453f485fc3c6d2cf01319a012c024d77dcd78a
     }
 
     /**

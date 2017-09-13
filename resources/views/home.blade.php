@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
+@section('titulo')
+Contenido de prueba
+@endsection
+
+@section('contenido')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -14,7 +18,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                  <div class="">
+
+                  </div>
                 </div>
             </div>
         </div>

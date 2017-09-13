@@ -16,5 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::resource('cliente', 'ClienteController');
+Route::resource('admin','AdminController');
+Route::name('cliente.eliminar')->post('cliente/eliminar','ClienteController@eliminar');
+Route::name('cliente.apdatecli')->post('cliente/apdatecli','ClienteController@apdatecli');
 Route::get('/home', 'HomeController@index')->name('home');

@@ -8,12 +8,31 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('titulo')</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    {!! Html::style('css/app.css')!!}
+    {!! Html::style('css/notificacion.css')!!}
+
+    @yield('css')
 </head>
 <body>
+
+
+@if (Session::has('mensaje'))
+<div class="alert alert-success alert-dismissable mensaje">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Exito!</strong> {{Session::get('mensaje')}}
+</div>
+@endif
+@if (Session::has('mensaje2'))
+<div class="alert alert-danger alert-dismissable mensaje2">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Exito!</strong> {{Session::get('mensaje2')}}
+</div>
+@endif
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -71,10 +90,22 @@
             </div>
         </nav>
 
-        @yield('content')
+        @yield('contenido')
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+      {!! Html::script('js/app.js')!!}
+      <script type="text/javascript">
+          $(document).ready(function() {
+              setTimeout(function(){
+                  $(".mensaje").fadeIn(2500); },0000);
+              });
+          $(document).ready(function() {
+              setTimeout(function(){
+                  $(".mensaje").fadeOut(2500); },5000);
+              });
+          </script>
+        @yield('js')
+
 </body>
 </html>

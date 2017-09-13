@@ -23,7 +23,8 @@ class CreateEmpleadoTable extends Migration
             $table->integer('TEL_EMP');
             $table->string('CARGO_EMP');
             $table->timestamps();
-        });    }
+        });   
+       }
 
     /**
      * Reverse the migrations.
@@ -32,7 +33,7 @@ class CreateEmpleadoTable extends Migration
      */
     public function down()
     {
-         Schema::dropIfExists('empleado');    
-     }    
+         Schema::dropIfExists('empleado');
+     }
 
 }
