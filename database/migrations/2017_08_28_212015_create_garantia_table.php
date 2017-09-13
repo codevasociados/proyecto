@@ -41,6 +41,9 @@ class CreateGarantiaTable extends Migration
 
           $table->integer('ID_CIN')->unsigned();
           $table->foreign('ID_CIN')->references('id')->on('cinta');
+
+          $table->integer('ID_FUE_AGU')->unsigned();
+          $table->foreign('ID_FUE_AGU')->references('id')->on('fuente_agua');
       });
     }
 

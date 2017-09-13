@@ -13,7 +13,13 @@ class CreateHuevoTable extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('huevo', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('DES_HUE');
+          $table->string('EST_HUE');
+          $table->float('PRE_HUE');
+          $table->timestamps();
+      });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreateHuevoTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('huevo');
     }
 }
