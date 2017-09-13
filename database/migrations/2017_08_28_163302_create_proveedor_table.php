@@ -13,7 +13,18 @@ class CreateProveedorTable extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('proveedor', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('NOM_PROV');
+          $table->string('PAT_PROV');
+          $table->string('MAT_PROV');
+          $table->integer('TEL_PROV');
+          $table->string('DIR_PROV');
+          $table->integer('EMPRESA_PROV');
+          $table->string('PROD_PROV');
+          $table->text('DET_PROV');
+          $table->timestamps();
+      });
     }
 
     /**
@@ -23,6 +34,6 @@ class CreateProveedorTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('proveedor');
     }
 }
