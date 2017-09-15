@@ -6,7 +6,7 @@ Clientes
   {!! Html::style('dynatable/jquery.dynatable.css')!!}
 @endsection
 @section('contenido')
-
+ 
 
 <div class="container-fluid">
   <div class="well" style="background-color: #fff;">
