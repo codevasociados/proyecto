@@ -11,23 +11,28 @@
     <title>@yield('titulo')</title>
 
     <!-- Styles -->
-    {!! Html::style('css/app.css') !!}
-    {!! Html::style('css/layout.css') !!}
+
+    {!! Html::style('css/app.css')!!}
+    {!! Html::style('css/notificacion.css')!!}
+
     @yield('css')
 </head>
 <body>
+
+
 @if (Session::has('mensaje'))
-  <div class="alert alert-success alert-dismissable mensaje">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong>correcto!</strong> {{Session::get('mensaje')}}
-  </div>
+<div class="alert alert-success alert-dismissable mensaje">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Exito!</strong> {{Session::get('mensaje')}}
+</div>
 @endif
 @if (Session::has('mensaje2'))
-  <div class="alert alert-danger alert-dismissable mensaje">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong>correcto!</strong> {{Session::get('mensaje2')}}
-  </div>
+<div class="alert alert-danger alert-dismissable mensaje2">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Exito!</strong> {{Session::get('mensaje2')}}
+</div>
 @endif
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -85,15 +90,11 @@
             </div>
         </nav>
 
-
         @yield('contenido')
     </div>
 
     <!-- Scripts -->
-
-    {!! Html::script('js/app.js') !!}
-      <script type="text/javascript">
-
+      {!! Html::script('js/app.js')!!}
       <script type="text/javascript">
           $(document).ready(function() {
               setTimeout(function(){
@@ -104,9 +105,7 @@
                   $(".mensaje").fadeOut(2500); },5000);
               });
           </script>
+        @yield('js')
 
-
-      </script>
-      @yield('js')
 </body>
 </html>

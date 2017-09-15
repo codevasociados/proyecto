@@ -1,5 +1,6 @@
 <?php
 
+
 namespace codev\Http\Controllers;
 
 use Illuminate\Http\Request;

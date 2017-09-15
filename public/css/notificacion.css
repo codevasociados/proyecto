@@ -1,0 +1,15 @@
+.mensaje{
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  z-index: 1;
+  background-color: #46de67;
+}
+.mensaje2{
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  z-index: 1;
+  color: #fff;
+  background-color: #eb4f0c;
+}

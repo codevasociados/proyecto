@@ -2,10 +2,9 @@
 
 namespace codev\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-use codev\Cliente; //llamammos al modelo para asi pueda interactuar con la base de datos
-
+//llamamos  al modelo
+use codev\Cliente;
 class ClienteController extends Controller
 {
     /**
@@ -15,10 +14,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-      //$clientes=Cliente::where('id','=',3)->select('NOM_CLIE')->get(); //esta consulta nos manda la consulta que hacemos
-      $clientes=Cliente::get(); //llamando registros
-      //dd($clientes); //prueba si manda datos
-      return view('clientes.index')->with('clientes',$clientes);
+        $clientes=Cliente::get();//llamando registros
+        //$consulta=cliente::where('id','=',3)->select('nom_clie')->get();
+        //dd($clientes); probar mediante consola
+        return view('clientes.index')->with('clientes',$clientes);
 
     }
 
@@ -40,31 +39,16 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente = new Cliente;
-        $cliente -> CI_CLIE =$request-> ci;
-        $cliente -> NOM_CLIE =$request-> nombre;
-        $cliente -> PAT_CLIE =$request-> apellido_paterno;
-        $cliente -> MAT_CLIE =$request-> apellido_materno;
-        $cliente -> TEL_CLIE =$request-> Telefono;
+        $cliente=new Cliente;
+        $cliente->NOM_CLIE=$request->nom_clie;
+        $cliente->PAT_CLIE=$request->pat_clie;
+        $cliente->MAT_CLIE=$request->mat_clie;
+        $cliente->CI_CLIE=$request->ci_clie;
+        $cliente->TEL_CLIE=$request->tel_clie;
 
-        $cliente -> save();
-
-        $mensaje='cliente registrado exitosamente';
-        return redirect()->Route('cliente.index')
-            ->with('mensaje', $mensaje);
-
-
-    }
-
-
-    public function elimina(Request $request)
-    {
-      $id=$request->id;
-      $cliente=Cliente::find($id);
-      $cliente->delete();
-      $mensaje='cliente fue eliminado exitosamente';
-      return redirect()->Route('cliente.index')
-          ->with('mensaje2', $mensaje);
+        $cliente->save();
+        $mensaje='Cliente registrado exitosamente';
+        return redirect()->route('cliente.index')->with('mensaje',$mensaje);
     }
 
     /**
@@ -96,9 +80,33 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+      $id=$request->id;
+      $cliente=Cliente::Find($id);
+      $cliente->NOM_CLIE=$request->nom_clie;
+      $cliente->PAT_CLIE=$request->pat_clie;
+      $cliente->MAT_CLIE=$request->mat_clie;
+      $cliente->CI_CLIE=$request->ci_clie;
+      $cliente->TEL_CLIE=$request->tel_clie;
+
+      $cliente->save();
+      $mensaje='Cliente registrado exitosamente';
+      return redirect()->route('cliente.index')->with('mensaje',$mensaje);
+    }
+    public function updatecli(Request $request)
+    {
+      $id=$request->id;
+      $cliente=Cliente::Find($id);
+      $cliente->NOM_CLIE=$request->nom_clie;
+      $cliente->PAT_CLIE=$request->pat_clie;  
+      $cliente->MAT_CLIE=$request->mat_clie;
+      $cliente->CI_CLIE=$request->ci_clie;
+      $cliente->TEL_CLIE=$request->tel_clie;
+
+      $cliente->save();
+      $mensaje='Cliente registrado exitosamente';
+      return redirect()->route('cliente.index')->with('mensaje',$mensaje);
     }
 
     /**
@@ -107,6 +115,14 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+     public function eliminar(Request $request)
+     {
+         $id=$request->id;
+         $cliente=Cliente::find($id);
+         $cliente->delete();
+         $mensaje2='Cliente eliminado exitosamente';
+         return redirect()->route('cliente.index')->with('mensaje2',$mensaje2);
+     }
     public function destroy($id)
     {
         //

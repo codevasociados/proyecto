@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('titulo')
 
-holassssssssssssssssssssss
+@section('titulo')
+Contenido de prueba
 @endsection
 
 @section('contenido')
@@ -18,7 +19,9 @@ holassssssssssssssssssssss
                         </div>
                     @endif
 
+                  <div class="">
 
+                  </div>
                 </div>
             </div>
         </div>
