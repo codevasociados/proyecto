@@ -14,7 +14,7 @@
 }
 #slidebar.active{
 	left: 0px;
-	
+
 }
 
 #slidebar ul li{
@@ -22,10 +22,10 @@
 	list-style: none;
 	padding:10px 10px;
 	width: 90%;
-	height:25px;
-	border-bottom: 1px solid #990000;
+	height:55px;
+	border-bottom: 1px solid #fff;
 	overflow: hidden;
-	border-bottom: 1px solid rgba(100,100,100,0.3);
+	border-bottom: 2px solid rgb(255, 255, 255,0.3);
 
 }
 div.barra{
@@ -39,7 +39,9 @@ div.barra{
 
 li:hover div.barra{
 	width:950px;
-	cursor: pointer
+	cursor: pointer;
+	color: #fff;
+	background-color: #fff;
 }
 
 p.menu{
@@ -64,4 +66,3 @@ p.menu{
 	height: 5px;
 	background: #151719;
 	margin: 5px 0px;
-}
