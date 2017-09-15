@@ -1,4 +1,40 @@
+<style media="screen">
+.boton1{
+	width: 300px;
+	height: 100px;
+	background-color:#ace40e;
+	transition: all 500ms linear;
+	border-radius: 30px;
+}
+.boton1:hover{
+	background-color:#baf90a;
+	color: #000;
+}
+.boton2{
+	width: 300px;
+	height: 100px;
+	background-color:#0eb1e4;
+	transition: all 500ms linear;
+	border-radius: 30px;
 
+}
+.boton2:hover{
+	background-color:#62c7e7;
+	color: #000;
+}
+.boton3{
+	width: 300px;
+	height: 100px;
+	background-color:#0ee41d;
+	transition: all 500ms linear;
+	border-radius: 30px;
+}
+.boton3:hover{
+	background-color:#52e40e;
+	color: #000;
+}
+
+</style>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +56,8 @@
 			<span></span>
 			<span></span>
 		</div>
-		<img src="..." alt="..." class="img-circle">
+		<p class="text-center"><img style="border: 5px solid #fff; margin-top: 10px;" src="imagen/male.png" alt="..." class="img-circle" width="10%"></p>
+
 		<ul>
 			<li>
 				<div class="barra"></div>
@@ -34,6 +71,13 @@
 					<p class="menu">Contactos</p>
 				</li>
 		</ul>
+		<form class="form-horizontal" role="form">
+			<div class="col-lg-12">
+      <button  class="boton1" type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span><br>PERSONAL</button>
+			  <button  class="boton2" type="button" class="btn btn-default"><span class="glyphicon glyphicon-stats"></span><br>INVENTARIO</button>
+				  <button class="boton3" type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span><br>VENTAS</button>
+    </div>
+		</form>
 	</div>
 </body>
 
