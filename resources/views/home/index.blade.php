@@ -34,7 +34,7 @@
 		list-style: none;
 		padding:10px 10px;
 		width: 90%;
-		height:25px;
+		height:55px;
 		border-bottom: 1px solid #990000;
 		overflow: hidden;
 		border-bottom: 1px solid rgba(100,100,100,0.3);
