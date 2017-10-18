@@ -1,3 +1,8 @@
+<style type="text/css">
+.content{
+	background-image: ;
+}
+</style>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +21,7 @@
 	<ul>
 		<li>
 			<div class="barra"></div>
-			<p class="menu">Inicio</p>
+			<p class="menu">Inicioooooooooooooooooooooooooooo</p>
 		</li>
 		<li>
 			<div class="barra"></div>
@@ -26,6 +31,9 @@
 			<p class="menu">Contactos</p>
 		</li>
 	</ul>
+</div>
+<div class="content">
+	
 </div>
 </body>
 </html>

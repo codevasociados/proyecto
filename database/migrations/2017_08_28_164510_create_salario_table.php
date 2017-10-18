@@ -30,6 +30,6 @@ class CreateSalarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('torta');
+        Schema::dropIfExists('salario');
     }
 }

@@ -52,7 +52,7 @@ class CreateVentaTable extends Migration
 
 
         });
-        });
+
     }
 
     /**

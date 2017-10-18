@@ -6,7 +6,7 @@ Clientes
   {!! Html::style('dynatable/jquery.dynatable.css')!!}
 @endsection
 @section('contenido')
- 
+
 
 <div class="container-fluid">
   <div class="well" style="background-color: #fff;">
@@ -15,7 +15,7 @@ Clientes
     <div class="panel-heading" >Tabla de CLientes</div>
   <div class="panel-body">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modcliente">Registro</button>
-    <button type="button" class="btn btn-success">+</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modpdf">Generar</button>
 
 
     <!-- Modal -->
@@ -80,6 +80,48 @@ Clientes
   </div>
 </div>
 <!--fin del Modal content-->
+
+
+<!-- Modal -->
+<div id="modpdf" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Consulta</h4>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" role="form" method="POST" action="{{route('cliente.store')}}">
+      {{csrf_field()}}
+      <div class="form-group">
+        <label for="nom_clie" class="col-lg-4 control-label">Ingrese nombre: </label>
+        <div class="col-lg-8">
+          <input type="text" class="form-control" id="nom_clie" name="nom_clie"
+                 placeholder="Nombre">
+        </div>
+      </div>
+
+
+
+      <div class="center-block">
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#cliente">Generar</button>
+      </div>
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</div>
+
+</div>
+</div>
+<!--fin del Modal content-->
+
+
+
 <!-- Modal -->
 <div id="modcliemodi" class="modal fade" role="dialog">
 <div class="modal-dialog">
@@ -177,6 +219,8 @@ Clientes
         <td data-dynatable-column="TEL_CLIE">tel_clie</td>
         <td data-dynatable-column="boton">ELIMINAR</td>
         <td data-dynatable-column="boton2">MODIFICAR</td>
+        <td data-dynatable-column="boton3">PDF</td>
+
 
       </tr>
     </thead>

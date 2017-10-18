@@ -1,20 +1,39 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url(fonts/Helvetica.ttf) format("truetype");
+}
 *{
 	margin:0px;
 	padding: 0px;
-	font-family: sans-serif;
+	font-family: Helvetica;
 	color: #fff;
+
 }
 #slidebar{
 	position: fixed;
 	width: 1000px;
 	height: 100%;
-	background-color: #990000;
+	background-color: rgba(23,173,236,0.9);
 	left: -1000px;
 	transition: all 500ms linear;
+
 }
 #slidebar.active{
 	left: 0px;
 
+}
+#blur{
+	position: fixed;
+	width: 1000px;
+	height: 100%;
+	ackground-color: #000;
+	left: -1000px;
+	transition: all 500ms linear;
+	filter: blur(5px);
+}
+#blur.active{
+	left: 0px;
+	filter: blur(5px);
 }
 
 #slidebar ul li{
@@ -66,3 +85,20 @@ p.menu{
 	height: 5px;
 	background: #151719;
 	margin: 5px 0px;
+}
+
+
+
+#menu2{
+  float: right;
+	width: 270px;
+	height: 50px;
+  margin-right: 2%;
+  margin-top: 2%;
+  top: 0px;
+	background-color: rgb(23,173,236);
+	left: 0px;
+ 
+	transition: all 500ms linear;
+
+}

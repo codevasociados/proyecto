@@ -23,7 +23,7 @@ class CreateGastoTable extends Migration
             $table->foreign('ID_HOR')->references('id')->on('gasto_horno');
 
             $table->integer('ID_GASTO')->unsigned();
-            $table->foreign('ID_GASTO')->references('id')->on('gasto_sucursal');
+            $table->foreign('ID_GASTO')->references('id')->on('gasto_suc');
 
             $table->integer('ID_HAR')->unsigned();
             $table->foreign('ID_HAR')->references('id')->on('harina');
